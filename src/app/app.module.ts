@@ -10,6 +10,7 @@ import { PostComponent } from './post/post.component';
 import { AboutExtraComponent } from './about-extra/about-extra.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ErrorPageComponent } from './error-page/error-page.component';
+import { AuthGuard } from './auth.guard';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,7 @@ import { ErrorPageComponent } from './error-page/error-page.component';
     ErrorPageComponent,
   ],
   imports: [BrowserModule, FormsModule, AppRoutingModule],
-  providers: [],
+  providers: [AuthGuard],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
